@@ -4,61 +4,94 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Catálogo - Vacaciones de Mar</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"/>
+  <title>Vacaciones de Mar - Catálogo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
+    * { box-sizing: border-box; }
     body {
       font-family: 'Montserrat', sans-serif;
       margin: 0;
-      background-color: #f9f9f9;
+      background: #f4f7fb;
       color: #333;
     }
-    header {
-      background: #0074b8;
+    nav {
+      background-color: #005b96;
+      display: flex;
+      justify-content: center;
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav a {
       color: white;
-      padding: 2rem;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #ffdd57;
+    }
+    header {
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+        url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') center/cover no-repeat;
+      color: white;
       text-align: center;
+      padding: 6rem 2rem;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
     }
     section {
-      padding: 2rem;
-      max-width: 1000px;
-      margin: auto;
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 0 1rem;
     }
     h2 {
-      color: #0074b8;
+      color: #005b96;
       margin-bottom: 1rem;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 0.5rem;
     }
     .propiedad {
-      border: 1px solid #ccc;
-      border-radius: 10px;
-      padding: 1rem;
-      margin-bottom: 1rem;
-      background: white;
       display: flex;
-      gap: 1rem;
+      background: white;
+      border-radius: 10px;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
     }
     .propiedad img {
-      width: 180px;
-      height: auto;
-      border-radius: 8px;
+      width: 300px;
       object-fit: cover;
     }
     .info {
+      padding: 1rem;
       flex: 1;
     }
     .info h3 {
-      margin: 0 0 0.5rem 0;
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+      color: #005b96;
     }
     footer {
       text-align: center;
-      padding: 1rem;
-      background: #0074b8;
+      background-color: #005b96;
       color: white;
-      margin-top: 2rem;
+      padding: 1rem;
+      margin-top: 3rem;
     }
   </style>
 </head>
 <body>
+
+<nav>
+  <a href="https://vacacionesdemar.github.io/vacaciones-de-mar/">Inicio</a>
+  <a href="#">Catálogo</a>
+  <a href="mailto:vacacionesdemar@gmail.com">Contacto</a>
+</nav>
 
 <header>
   <h1>Catálogo de Propiedades</h1>
@@ -67,10 +100,10 @@
 <section>
   <h2>🏡 En Venta</h2>
   <div class="propiedad">
-    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="Casa en venta" />
+    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="Venta" />
     <div class="info">
       <h3>Chalet con vistas al mar</h3>
-      <p>Ubicado en Roquetas de Mar. 3 habitaciones, 2 baños, terraza y garaje.</p>
+      <p>Ubicado en Roquetas de Mar. 3 habitaciones, 2 baños, terraza, garaje.</p>
       <p><strong>Precio:</strong> 220.000 €</p>
     </div>
   </div>
@@ -79,10 +112,10 @@
 <section>
   <h2>🌴 Vacacional</h2>
   <div class="propiedad">
-    <img src="https://images.unsplash.com/photo-1505691723518-36a5ac3be353" alt="Apartamento vacacional" />
+    <img src="https://images.unsplash.com/photo-1505691723518-36a5ac3be353" alt="Vacacional" />
     <div class="info">
       <h3>Apartamento playa Aguadulce</h3>
-      <p>2 habitaciones, piscina comunitaria, a 5 min de la playa. Ideal para verano.</p>
+      <p>2 habitaciones, piscina, a 5 min de la playa. Ideal verano.</p>
       <p><strong>Desde:</strong> 90 €/noche</p>
     </div>
   </div>
@@ -91,10 +124,10 @@
 <section>
   <h2>🏘️ Alquileres</h2>
   <div class="propiedad">
-    <img src="https://images.unsplash.com/photo-1599423300746-b62533397364" alt="Alquiler piso" />
+    <img src="https://images.unsplash.com/photo-1599423300746-b62533397364" alt="Alquiler" />
     <div class="info">
       <h3>Piso céntrico en El Parador</h3>
-      <p>3 habitaciones, amueblado, cerca de supermercados y colegios.</p>
+      <p>3 habitaciones, amueblado, cerca de colegios y servicios.</p>
       <p><strong>Alquiler:</strong> 600 €/mes</p>
     </div>
   </div>
@@ -102,12 +135,12 @@
 
 <section>
   <h2>📋 Asesoría Inmobiliaria</h2>
-  <p>Te guiamos en cada paso para comprar, vender o alquilar tu vivienda. Contacta con nosotros para recibir orientación personalizada.</p>
+  <p>Te guiamos en cada paso: comprar, vender o alquilar con total tranquilidad.</p>
 </section>
 
 <section>
   <h2>📐 Valoración Gratuita</h2>
-  <p>¿Quieres saber cuánto vale tu casa? Te ofrecemos una valoración sin compromiso. <a href="mailto:vacacionesdemar@gmail.com">Solicítala aquí</a>.</p>
+  <p>¿Quieres saber cuánto vale tu casa? Te valoramos gratis. <a href="mailto:vacacionesdemar@gmail.com">Solicítala aquí</a>.</p>
 </section>
 
 <footer>
