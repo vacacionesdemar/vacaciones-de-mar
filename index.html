@@ -11,35 +11,82 @@
       margin: 0;
       padding: 0;
     }
-    #mapa {
-      height: 400px;
-      width: 100%;
-      margin-top: 2rem;
-      border-radius: 10px;
-      overflow: hidden;
-    }
-    .section-title {
-      font-size: 2rem;
-      margin: 1rem 0;
+    header {
+      background-color: #0033cc;
+      padding: 1rem;
+      color: white;
       text-align: center;
+    }
+    nav a {
+      margin: 0 1rem;
+      color: white;
+      text-decoration: none;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .hero {
+      background: url('https://source.unsplash.com/1600x600/?beach,roquetas') no-repeat center center/cover;
+      height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 2rem;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
     }
     section {
       padding: 2rem;
       background-color: #f9f9f9;
     }
-    p {
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 1rem;
       text-align: center;
-      font-size: 1.1rem;
+    }
+    #mapa {
+      height: 400px;
+      width: 100%;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    footer {
+      background-color: #0033cc;
+      color: white;
+      text-align: center;
+      padding: 1rem;
     }
   </style>
 </head>
 <body>
 
+  <header>
+    <h1>Vacaciones de Mar</h1>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#ubicacion">Ubicación</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="inicio">
+    Bienvenido a tu inmobiliaria en Roquetas de Mar
+  </section>
+
   <section id="ubicacion">
     <h2 class="section-title">Ubicación: Roquetas de Mar y Alrededores</h2>
-    <p>Nuestras propiedades se encuentran en las mejores zonas costeras de Roquetas de Mar, Almería y alrededores.</p>
+    <p style="text-align: center;">Nuestras propiedades se encuentran en las mejores zonas costeras de Roquetas de Mar, Almería y alrededores.</p>
     <div id="mapa"></div>
   </section>
+
+  <section id="contacto">
+    <h2 class="section-title">Contacto</h2>
+    <p style="text-align: center;">vacacionesdemar@gmail.com | Tel: 662 419 543 | 671 316 074</p>
+  </section>
+
+  <footer>
+    &copy; 2025 Vacaciones de Mar - Inmobiliaria
+  </footer>
 
   <script>
     function initMap() {
