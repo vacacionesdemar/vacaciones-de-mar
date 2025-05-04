@@ -4,96 +4,115 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Vacaciones de Mar - Inmobiliaria</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <title>Catálogo - Vacaciones de Mar</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"/>
   <style>
     body {
-      margin: 0;
       font-family: 'Montserrat', sans-serif;
-      background-color: #f0f4f8;
+      margin: 0;
+      background-color: #f9f9f9;
+      color: #333;
     }
     header {
-      background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') no-repeat center center/cover;
-      height: 100vh;
+      background: #0074b8;
       color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      padding: 2rem;
       text-align: center;
     }
-    header h1 {
-      font-size: 3rem;
-      background: rgba(0,0,0,0.5);
-      padding: 1rem 2rem;
-      border-radius: 10px;
-    }
     section {
-      padding: 3rem 1rem;
+      padding: 2rem;
       max-width: 1000px;
       margin: auto;
     }
     h2 {
-      color: #005b96;
-      font-size: 2rem;
+      color: #0074b8;
       margin-bottom: 1rem;
     }
-    .mapa {
-      width: 100%;
-      height: 400px;
+    .propiedad {
+      border: 1px solid #ccc;
       border-radius: 10px;
-      overflow: hidden;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      background: white;
+      display: flex;
+      gap: 1rem;
     }
-    .whatsapp {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 100;
+    .propiedad img {
+      width: 180px;
+      height: auto;
+      border-radius: 8px;
+      object-fit: cover;
     }
-    .whatsapp img {
-      width: 60px;
-      height: 60px;
+    .info {
+      flex: 1;
+    }
+    .info h3 {
+      margin: 0 0 0.5rem 0;
     }
     footer {
       text-align: center;
-      background: #005b96;
-      color: white;
       padding: 1rem;
+      background: #0074b8;
+      color: white;
+      margin-top: 2rem;
     }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>Vacaciones de Mar - Inmobiliaria</h1>
+  <h1>Catálogo de Propiedades</h1>
 </header>
 
 <section>
-  <h2>Ubicación: Roquetas de Mar y Alrededores</h2>
-  <p>Encuentra propiedades únicas para vacaciones o inversión en las zonas más hermosas de Almería.</p>
-  <div class="mapa" id="map"></div>
+  <h2>🏡 En Venta</h2>
+  <div class="propiedad">
+    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="Casa en venta" />
+    <div class="info">
+      <h3>Chalet con vistas al mar</h3>
+      <p>Ubicado en Roquetas de Mar. 3 habitaciones, 2 baños, terraza y garaje.</p>
+      <p><strong>Precio:</strong> 220.000 €</p>
+    </div>
+  </div>
 </section>
 
-<div class="whatsapp">
-  <a href="https://wa.me/34662419543" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
-  </a>
-</div>
+<section>
+  <h2>🌴 Vacacional</h2>
+  <div class="propiedad">
+    <img src="https://images.unsplash.com/photo-1505691723518-36a5ac3be353" alt="Apartamento vacacional" />
+    <div class="info">
+      <h3>Apartamento playa Aguadulce</h3>
+      <p>2 habitaciones, piscina comunitaria, a 5 min de la playa. Ideal para verano.</p>
+      <p><strong>Desde:</strong> 90 €/noche</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>🏘️ Alquileres</h2>
+  <div class="propiedad">
+    <img src="https://images.unsplash.com/photo-1599423300746-b62533397364" alt="Alquiler piso" />
+    <div class="info">
+      <h3>Piso céntrico en El Parador</h3>
+      <p>3 habitaciones, amueblado, cerca de supermercados y colegios.</p>
+      <p><strong>Alquiler:</strong> 600 €/mes</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>📋 Asesoría Inmobiliaria</h2>
+  <p>Te guiamos en cada paso para comprar, vender o alquilar tu vivienda. Contacta con nosotros para recibir orientación personalizada.</p>
+</section>
+
+<section>
+  <h2>📐 Valoración Gratuita</h2>
+  <p>¿Quieres saber cuánto vale tu casa? Te ofrecemos una valoración sin compromiso. <a href="mailto:vacacionesdemar@gmail.com">Solicítala aquí</a>.</p>
+</section>
 
 <footer>
-  Contacto: vacacionesdemar@gmail.com | Tel: 662 419 543 / 671 316 074
+  Vacaciones de Mar · vacacionesdemar@gmail.com · Tel: 662 419 543
 </footer>
 
-<script>
-  function initMap() {
-    const roquetas = { lat: 36.7641, lng: -2.6157 };
-    const map = new google.maps.Map(document.getElementById("map"), {
-      zoom: 12,
-      center: roquetas
-    });
-    new google.maps.Marker({ position: roquetas, map });
-  }
-</script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDgr5fG90lZ9UptP3UnBTKom7eOU-Nis_4&callback=initMap"></script>
 </body>
 </html>
